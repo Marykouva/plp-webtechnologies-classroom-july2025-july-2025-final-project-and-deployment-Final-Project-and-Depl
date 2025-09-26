@@ -38,5 +38,6 @@ if (!studentid.match(idPattern)) {
 
   message.style.color = "limegreen";
   message.textContent = "Registration successful!";
+  message.classList.add("show");
   this.reset();
 });
