@@ -1,0 +1,138 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url('./images/voltas\ as\ AULAS.jpg') no-repeat center/cover;
+  color: #fff;
+}
+
+/* Navbar */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-weight: bold; font-size: 1.2rem; }
+.nav-links { list-style: none; display: flex; gap: 15px; }
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+.nav-links a:hover,
+.nav-links .active { background: rgba(255,255,255,0.2); }
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00ffe5;
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.btn:hover { background: #0077b6; color: #fff; }
+
+/* About */
+.about {
+  flex: 1;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Registration Form */
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.glass-form {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+.glass-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.glass-form label { display: block; margin-top: 10px; }
+.glass-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+}
+.glass-form button {
+  width: 100%;
+  margin-top: 20px;
+}
+.form-message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-links { flex-direction: column; }
+}
+
+/* Forward & Backward Buttons */
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.nav-buttons a {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-buttons a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  transform: scale(1.05);
+}
