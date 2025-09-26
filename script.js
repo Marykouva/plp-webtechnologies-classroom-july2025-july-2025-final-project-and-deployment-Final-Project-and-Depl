@@ -14,6 +14,14 @@ document.getElementById("studentForm").addEventListener("submit", function(e) {
     return;
   }
 
+  let idPattern = /^[0-9]{10}$/; // only 10 digits
+if (!studentid.match(idPattern)) {
+  message.style.color = "red";
+  message.textContent = "Student ID must be exactly 10 digits.";
+  return;
+}
+
+
   let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!email.match(emailPattern)) {
     message.style.color = "red";
