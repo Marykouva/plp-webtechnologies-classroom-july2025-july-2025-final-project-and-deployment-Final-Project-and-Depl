@@ -52,7 +52,6 @@ nav {
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease;
 }
-
 .btn:hover {
   transform: scale(1.05);
   background: #0077b6;
@@ -110,20 +109,15 @@ nav {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
- .form-message.show {
-    opacity: 1;
- }
- 
+.form-message.show {
+  opacity: 1;
+}
+
 /* Footer */
 footer {
   background: rgba(0,0,0,0.6);
   padding: 15px;
   text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .nav-links { flex-direction: column; }
 }
 
 /* Forward & Backward Buttons */
@@ -146,9 +140,32 @@ footer {
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .nav-buttons a:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #000;
   transform: scale(1.05);
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  /* Navbar links stack */
+  .nav-links { flex-direction: column; gap: 10px; }
+
+  /* Hero section scales down */
+  .hero {
+    padding: 20px 10px;
+  }
+  .hero h2 { font-size: 1.5rem; }
+  .hero p { font-size: 1rem; }
+  .btn { padding: 8px 16px; }
+
+  /* Form section scales down */
+  .form-section { padding: 20px 10px; }
+  .glass-form { width: 90%; }
+
+  /* Footer scales down */
+  footer { font-size: 0.8rem; padding: 10px; }
+
+  /* Forward & Backward buttons scale down */
+  .nav-buttons a { padding: 6px 12px; font-size: 0.85rem; }
 }
